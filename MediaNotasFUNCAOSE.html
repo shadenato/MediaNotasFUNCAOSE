@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SITUAÇÃO ALUNO</title>
+</head>
+<body>
+
+<h1>SITUAÇÃO FINAL DE SEMESTRE</h1>
+<div id="resultado"></div>
+
+
+<script>
+    let nome_aluno = prompt("Digite o nome do aluno:");
+    let nome_prof = prompt("Digite o nome do professor:");
+    let nota1 = parseFloat(prompt("Digite a primeira nota:", "0"));
+    let nota2 = parseFloat(prompt("Digite a segunda nota:", "0"));
+    let nota3 = parseFloat(prompt("Digite a terceira nota:", "0"));
+    let media = "";
+    let situacao = "";
+
+    media = ((nota1 + nota2 + nota3)/3).toFixed(2);
+    
+
+    if(media < 4) {
+        situacao = "Retido";
+    } else if (media < 6){
+        situacao="Recuperação";
+    } else {
+        situacao="Aprovado";
+    }
+
+        document.getElementById("resultado").innerHTML = "<ul> <li><b>Nome do aluno:</b> " + nome_aluno + "</li> <br> <li><b>Nome professor:</b> " + nome_prof + "</li> <br> <li><b>1ª Nota:</b> " + nota1 + "</li> <br> <li><b>2ª Nota:</b> " + nota2 + "</li><br> <li><b>3ª Nota:</b> " + nota3 + "</li><br> <li><b>Média</b> " + media + "</li><br> <li><b>Situação</b> " + situacao + "</li></ul>";
+
+
+</script>
+
+
+</body>
+</html>
